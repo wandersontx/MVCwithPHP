@@ -5,14 +5,15 @@
 	},
 	"authors":[
 		{
-			"name":"Wanderson Teixeira",
-			"email":"wandersonh89@gmail.com"
+			"name":"Wanderson",
+			"email":"wanderson@gmail.com"
 		}
 	],
 	"autoload":{
 		"psr-4":{
-			"app\\": "App/",
+			"App\\": "App/",
 			"MF\\" :"vendor/MF/"
 		}
 	}
 }
+
