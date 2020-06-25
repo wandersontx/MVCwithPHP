@@ -1,26 +1,10 @@
 <?php
 namespace App;
-class Route{
+use MF\Init\Bootstrap;
 
-	private $routes;
+class Route  extends Bootstrap{
 
-	public function getRoutes()
-	{
-		return $this->routes;
-	}
-
-	public function setRoutes(array $routes)
-	{
-		$this->routes = $routes;
-	}
-
-	public function __construct()
-	{
-		$this->iniRoutes();
-		$this->run($this->getUrl());
-	}
-
-	public function iniRoutes()
+	protected function iniRoutes()
 	{
 		$routes['home'] = array(
 			'route' => '/', //rota raiz
@@ -36,22 +20,8 @@ class Route{
 		$this->setRoutes($routes);
 	}
 
-	public function run($url)
-	{
-		foreach ($this->getRoutes() as $key => $routes) {
-			if($url == $routes['route']){
-				$class = "App\\Controllers\\".ucfirst($routes['controller']);
+	
 
-				$controller = new $class;
-				$action = $routes['action'];
-				$controller->$action();
-			}
-		}
-	}
-
-	public function getUrl()
-	{
-		return parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-	}
+	
 }
 ?>
