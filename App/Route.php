@@ -4,7 +4,7 @@ use MF\Init\Bootstrap;
 
 class Route  extends Bootstrap{
 
-	protected function iniRoutes()
+	protected function initRoutes()
 	{
 		$routes['home'] = array(
 			'route' => '/', //rota raiz

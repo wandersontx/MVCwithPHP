@@ -4,11 +4,11 @@ namespace MF\Init;
 abstract class Bootstrap{
 	private $routes;
 
-	abstract protected function iniRoutes();
+	abstract protected function initRoutes();
 
 	public function __construct()
 	{
-		$this->iniRoutes();
+		$this->initRoutes();
 		$this->run($this->getUrl());
 	}
 
