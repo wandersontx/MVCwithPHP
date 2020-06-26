@@ -2,9 +2,11 @@
 namespace App\Controllers;
 
 use MF\Controller\Action;
+use MF\Model\Container;
+
 use App\Models\Produto;
 use App\Models\Info;
-use MF\Model\Container;
+
 
 class IndexController extends Action{
 
