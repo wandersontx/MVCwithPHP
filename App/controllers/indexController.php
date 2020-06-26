@@ -1,13 +1,9 @@
 <?php
 namespace App\Controllers;
 
-class IndexController{
+use MF\Controller\Action;
 
-	private $view;
-
-	public function __construct(){
-		$this->view = new \stdClass();//classe nativa do PHP, a partir dela e possivel cria objetos padrões, semelhando ao Object do Java, std de standard.
-	}
+class IndexController extends Action{
 
 	public function index(){
 		//index.phtml terá acesso ao array
@@ -20,13 +16,7 @@ class IndexController{
 		$this->render("sobreNos");
 	}
 
-	public function render($view){
-		$classeAtual = get_class($this);
-		$classeAtual = str_replace("App\\Controllers\\", '', $classeAtual );
-		$classeAtual = strtolower(str_replace("Controller", '', $classeAtual));
-		echo $classeAtual;
-		require_once "../app/views/".$classeAtual."/".$view.".phtml";
-	}
+	
 }
 
 ?>
