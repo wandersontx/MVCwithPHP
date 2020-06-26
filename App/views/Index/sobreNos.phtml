@@ -1,7 +1,8 @@
 <h1>Sobre nós</h1>
 <hr>
-<?php
-foreach ($this->view->dados as $key => $value) {
-		echo $value.'<br />';
-	}
-?>
+
+<?foreach ($this->view->dados as $key => $info) {?>
+<h1><?= $info['titulo']?></h1>
+<br>
+<p><?=$info['descricao']?><p>
+<?}?>
